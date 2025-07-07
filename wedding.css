@@ -1,0 +1,559 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fff8f0;
+    color: #5a2a2a;
+    overflow-x: hidden;
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #9a0606;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+#nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: url('blurred bg.jpeg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  padding: 4rem 2rem;
+  color: black;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.welcome-container {
+  position: relative;  
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.welcome-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.welcome-text {
+  max-width: 600px;
+  text-align: center;
+  color: black;
+  margin-top: 1.5rem;
+}
+
+.welcome-text h2 {
+  margin-top: 1.5rem;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.wedding-details {
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+.tag-line {
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.countdown {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.our-story-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #fff8f0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.mySlide {
+    display: none;
+    animation: fade 1s ease-in-out;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.story-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.story-image img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: #9a0606;
+}
+
+/*Events styling*/
+.events-section {
+  background-color: #fff8f0;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.events-section h2 {
+  font-size: 2.5rem;
+  color: #9a0606;
+  margin-bottom: 2rem;
+}
+
+.event-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  margin: 2rem auto;
+  max-width: 850px;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.event-info {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.event-info h3 {
+  color: #5a2a2a;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-qr {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.event-qr img {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.qr-caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.event-note {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #7a4a4a;
+}
+
+/*Gallery Section*/
+.gallery-section {
+    padding: 4rem 2rem;
+    background-color: #fff8f0;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    color: #9a0606;
+    margin-bottom: 2rem;
+}
+
+.gallery-container {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;  
+}
+
+.gallery-item {
+    width: 90%;
+    text-align: center;
+    max-width: 400px;
+}
+
+.gallery-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #444;
+    font-weight: bolder;
+    font-style: italic;
+    
+}
+
+/* Hidden items */
+.hidden {
+    display: none;
+}
+
+/* Lightbox styling */
+.lightbox {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+    margin-bottom: 10px;
+}
+
+.lightbox-caption {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+/* View More button */
+#viewMoreBtn {
+    margin-top: 2rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #9a0606;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#viewMoreBtn:hover {
+    background-color: #b81818;
+}
+
+.guestbook-section {
+  background-color: #fdf8f2;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.guestbook-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff8f5;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.guestbook-section h2 {
+  font-size: 2.4rem;
+  color: #800000;
+  margin-bottom: 25px;
+}
+
+.guestbook-message {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.qr-guestbook-image {
+  width: 200px;            /* Adjust size as needed */
+  height: auto;            /* Keeps the aspect ratio */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;     /* Optional: rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* Optional: soft shadow */
+  transition: transform 0.3s ease;
+}
+
+.qr-guestbook-image:hover {
+  transform: scale(1.05);  /* Slight zoom on hover */
+}
+
+.contact-section {
+    padding: 3rem 1rem;
+    background-color: #fefefe;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #b30000;
+}
+
+.contact-message {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-box {
+    background-color: #fff7f7;
+    border: 1px solid #ffdddd;
+    border-radius: 8px;
+    padding: 1.2rem;
+    width: 260px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.contact-box h3 {
+    color: #a30000;
+    margin-bottom: 0.5rem;
+}
+
+.contact-box a {
+    color: #b30000;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/*Footer section*/
+.footer-thanks {
+    background-color: #9a0606;
+    color: #fff8f0;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-top: 3rem;
+    border-top: 2px solid #fff0e6;
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .welcome-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .welcome-text,
+  .welcome-text h2,
+  .welcome-text p,
+  .wedding-details,
+  .tag-line {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  }
+
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #9a0606;
+    margin-top: 1rem;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  #nav-links li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .welcome-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-text {
+    padding: 0 1rem;
+  }
+
+  .story-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-text {
+        text-align: center;
+    }
+
+    .story-image img {
+        max-width: 90%;
+    }
+    .welcome-text,
+  .welcome-text h2,
+  .welcome-text p,
+  .wedding-details,
+  .tag-line {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-text p {
+    font-size: 0.95rem;
+  }
+
+  .welcome-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .welcome-text,
+  .welcome-text h2,
+  .welcome-text p,
+  .wedding-details,
+  .tag-line {
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  }
+}
